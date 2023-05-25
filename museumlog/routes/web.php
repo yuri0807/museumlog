@@ -16,9 +16,10 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 use App\Http\Controllers\Admin\MuseumController;
-Route::controller(MuseumController::class)->prefix('admin')->group(function () {
+Route::controller(MuseumController::class)->prefix('admin')->name('admin.')->middleware('auth')->group(function () {
     Route::get('museum/create', 'add')->name('museum.add');
-});
+    Route::post('museum/create', 'create')->name('museum.create');
+}); 
 
 Auth::routes();
 
