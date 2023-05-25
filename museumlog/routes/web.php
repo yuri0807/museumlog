@@ -28,3 +28,6 @@ Route::controller(MuseumController::class)->prefix('admin')->name('admin.')->mid
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+use App\Http\Controllers\MuseumController as PublicMuseumController;
+Route::get('/', [PublicMuseumController::class, 'index'])->name('museum.index');
