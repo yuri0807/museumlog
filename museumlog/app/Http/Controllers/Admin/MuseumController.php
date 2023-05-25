@@ -43,4 +43,65 @@ public function add()
         // admin/museum/createにリダイレクトする
         return redirect('admin/museum/create');
     }
+    public function index(Request $request)
+    {
+        $cond_title = $request->cond_title;
+        if ($cond_title != '') {
+            // 検索されたら検索結果を取得する
+            $posts = Museum::where('title', $cond_title)->get();
+        } else {
+            // それ以外はすべてのニュースを取得する
+            $posts = Museum::all();
+        }
+        return view('admin.museum.index', ['posts' => $posts, 'cond_title' => $cond_title]);
+    }
+    
+    
+    public function edit(Request $request)
+    {
+        // Museum Modelからデータを取得する
+        $museum = Museum::find($request->id);
+        if (empty($museum)) {
+            abort(404);
+        }
+        return view('admin.museum.edit', ['museum_form' => $museum]);
+    }
+
+    public function update(Request $request)
+    {
+        // Validationをかける
+        $this->validate($request, Museum::$rules);
+        // News Modelからデータを取得する
+        $museum = Museum::find($request->id);
+        // 送信されてきたフォームデータを格納する
+        $museum_form = $request->all();
+        
+        if ($request->remove == 'true') {
+            $museum_form['image_path'] = null;
+        } elseif ($request->file('image')) {
+            $path = $request->file('image')->store('public/image');
+            $museum_form['image_path'] = basename($path);
+        } else {
+            $museum_form['image_path'] = $museum->image_path;
+        }
+
+        unset($museum_form['image']);
+        unset($museum_form['remove']);
+        unset($museum_form['_token']);
+
+        // 該当するデータを上書きして保存する
+        $museum->fill($museum_form)->save();
+ }
+ 
+    public function delete(Request $request)
+    {
+        // 該当するNews Modelを取得
+        $museum = Museum::find($request->id);
+
+        // 削除する
+        $museum->delete();
+        
+        return redirect('admin/museum/');
+   
+}
 }

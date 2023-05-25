@@ -19,6 +19,10 @@ use App\Http\Controllers\Admin\MuseumController;
 Route::controller(MuseumController::class)->prefix('admin')->name('admin.')->middleware('auth')->group(function () {
     Route::get('museum/create', 'add')->name('museum.add');
     Route::post('museum/create', 'create')->name('museum.create');
+    Route::get('museum', 'index')->name('museum.index');
+    Route::get('museum/edit', 'edit')->name('museum.edit');
+    Route::post('museum/edit', 'update')->name('museum.update');
+    Route::get('museum/delete', 'delete')->name('museum.delete');
 }); 
 
 Auth::routes();
