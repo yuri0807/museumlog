@@ -167,7 +167,8 @@ return [
 
     'attributes' => [
         'title' => 'タイトル',
-        'body' => '本文'
+        'body' => '本文',
+        'class' => '分類'
     ],
 
 ];

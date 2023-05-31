@@ -32,6 +32,20 @@
                         <div class="col-md-10">
                             <input type="file" class="form-control-file" name="image">
                         </div>
+                        <div class="form-group row">
+                        <label class="col-md-2">分類</label>
+                        <div class="col-md-10">
+                              {{-- ラジオボタン  --}}
+                        <div class="form-check form-check-inline is-invalid">
+ 　                　　　 <input class="form-check-input form-check-inline is-invalid " type="radio" name="category_id" id="category1" value="1" >
+                       <label class="form-check-label" for="category1">行きたい</label>
+                       </div>                        
+                       <div class="form-check form-check-inline is-invalid">
+　             　　　  <input class="form-check-input form-check-inline is-invalid " type="radio" name="category_id" id="category2" value="2" >
+　　　　               <label class="form-check-label" for="category2">行った</label>
+                       </div>                          
+                       </div>
+                        </div>
                     </div>
                     @csrf
                     <input type="submit" class="btn btn-primary" value="追加">
