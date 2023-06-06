@@ -22,5 +22,9 @@ class MuseumController extends Controller
         // また View テンプレートに headline、 posts、という変数を渡している
         return view('museum.index', ['headline' => $headline, 'posts' => $posts]);
     }
+    public function add(Request $request)
+    {
+        return view('museum.mlog');
+    }
     
 }
