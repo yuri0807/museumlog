@@ -35,16 +35,18 @@
                         <div class="form-group row">
                         <label class="col-md-2">分類</label>
                         <div class="col-md-10">
-                              {{-- ラジオボタン  --}}
-                        <div class="form-check form-check-inline is-invalid">
- 　                　　　 <input class="form-check-input form-check-inline is-invalid " type="radio" name="category_id" id="category1" value="1" >
-                       <label class="form-check-label" for="category1">行きたい</label>
-                       </div>                        
-                       <div class="form-check form-check-inline is-invalid">
-　             　　　  <input class="form-check-input form-check-inline is-invalid " type="radio" name="category_id" id="category2" value="2" >
-　　　　               <label class="form-check-label" for="category2">行った</label>
-                       </div>                          
-                       </div>
+                             <div class="form-check">
+                        <input class="form-check-input" type="radio" name="go" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                        行きたい
+                        </label>
+                        </div>
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="go" id="flexRadioDefault2" checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                        行った
+                        </label>
+                        </div>
                         </div>
                     </div>
                     @csrf

@@ -43,6 +43,7 @@
                                     <th>{{ $museum->id }}</th>
                                     <td>{{ Str::limit($museum->title, 100) }}</td>
                                     <td>{{ Str::limit($museum->body, 250) }}</td>
+                                    <td>{{ Str::limit($museum->go, 50) }}</td>
                                     <td>
                                         <div>
                                             <a href="{{ route('admin.museum.edit', ['id' => $museum->id]) }}">編集</a>

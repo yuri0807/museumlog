@@ -17,7 +17,6 @@ class Museum extends Model
     public static $rules = array(
         'title' => 'required',
         'body' => 'required',
-        'class' => 'required',
-        
+        'go' => 'required',
     );
 }
