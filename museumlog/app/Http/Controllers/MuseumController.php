@@ -23,8 +23,4 @@ class MuseumController extends Controller
         return view('museum.index', ['headline' => $headline, 'posts' => $posts]);
     }
     
-    public function view(Request $request)
-    {
-        return view('museum.view', ['headline' => $headline, 'posts' => $posts]);
-    }
 }
