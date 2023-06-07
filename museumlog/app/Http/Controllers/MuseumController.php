@@ -20,11 +20,10 @@ class MuseumController extends Controller
         }
         // news/index.blade.php ファイルを渡している
         // また View テンプレートに headline、 posts、という変数を渡している
-        return view('museum.index', ['headline' => $headline, 'posts' => $posts]);
+        return view('museum.test', ['headline' => $headline, 'posts' => $posts]);
     }
     public function add(Request $request)
     {
         return view('museum.mlog');
     }
-    
 }

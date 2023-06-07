@@ -3,6 +3,11 @@
 @section('content')
     <div class="container">
         <hr color="#c0c0c0">
+        <ul class="sort-btn">
+<li class="sort00 active">全て</li><!--はじめに「全て」ボタンに現在地表示をつけるためactive というクラス名を付与-->
+<li class="sort01">行った</li>
+<li class="sort02">行きたい</li>
+</ul>
         @if (!is_null($headline))
             <div class="row">
                 <div class="headline col-md-10 mx-auto">
