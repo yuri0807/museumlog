@@ -8,6 +8,17 @@
 <li class="sort01">行った</li>
 <li class="sort02">行きたい</li>
 </ul>
+ <ul class="grid">
+      @foreach($posts as $museum)
+    <li class="item sort01">
+    <div class="item-content">
+        <th>{{ $museum->id }}</th>
+    <a href="{{ route('admin.museum.edit', ['id' => $museum->id]) }}" > <img src="{{ secure_asset('storage/image/' . $museum->image_path) }}"></a>
+    </div>
+    </li>
+     @endforeach
+  </ul>
+
         @if (!is_null($headline))
             <div class="row">
                 <div class="headline col-md-10 mx-auto">
