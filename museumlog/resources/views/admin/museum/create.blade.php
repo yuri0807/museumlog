@@ -36,13 +36,13 @@
                         <label class="col-md-2">分類</label>
                         <div class="col-md-10">
                              <div class="form-check">
-                        <input class="form-check-input" type="radio" name="go" id="flexRadioDefault1">
+                        <input class="form-check-input" type="radio" name="go" id="flexRadioDefault1" value"1" @if(old("go") == 1) checked @endif />
                         <label class="form-check-label" for="flexRadioDefault1">
                         行きたい
                         </label>
                         </div>
                         <div class="form-check">
-                        <input class="form-check-input" type="radio" name="go" id="flexRadioDefault2" checked>
+                        <input class="form-check-input" type="radio" name="go" id="flexRadioDefault2" value"2" @if(old("go") == 2) checked @endif />
                         <label class="form-check-label" for="flexRadioDefault2">
                         行った
                         </label>

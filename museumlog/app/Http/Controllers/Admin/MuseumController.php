@@ -103,5 +103,11 @@ public function add()
         
         return redirect('admin/museum/');
    
-}
+    }
+    public function show(Request $request){
+        
+        $museum = Museum::find($request->id);
+        //dd($museum);
+        return view('admin.museum.show', ["museum" => $museum]);
+    }
 }

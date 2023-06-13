@@ -13,7 +13,7 @@
     <li class="item sort01">
     <div class="item-content">
         <th>{{ $museum->id }}</th>
-    <a href="{{ route('admin.museum.edit', ['id' => $museum->id]) }}" > <img src="{{ secure_asset('storage/image/' . $museum->image_path) }}"></a>
+    <a href="{{ route('admin.museum.show', ['id' => $museum->id]) }}" > <img src="{{ secure_asset('storage/image/' . $museum->image_path) }}"></a>
     </div>
     </li>
      @endforeach
