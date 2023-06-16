@@ -39,16 +39,16 @@
                                 </label>
                             </div>
                             <div class="form-group row">
-                        <label class="col-md-2">分類</label>
+                          <label class="col-md-2">分類</label>
                         <div class="col-md-10">
-                        <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                             <div class="form-check">
+                        <input class="form-check-input" type="radio" name="go" id="flexRadioDefault1" value="1" {{ $museum_form->go == 1 ? "checked" : "" }}/>
                         <label class="form-check-label" for="flexRadioDefault1">
                         行きたい
                         </label>
                         </div>
                         <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                        <input class="form-check-input" type="radio" name="go" id="flexRadioDefault2" value="2" {{ $museum_form->go == 2 ? "checked" : "" }}/>
                         <label class="form-check-label" for="flexRadioDefault2">
                         行った
                         </label>

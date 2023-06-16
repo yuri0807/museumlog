@@ -13,14 +13,10 @@ class MuseumController extends Controller
     {
         $posts = Museum::all()->sortByDesc('updated_at');
 
-        if (count($posts) > 0) {
-            $headline = $posts->shift();
-        } else {
-            $headline = null;
-        }
+
         // news/index.blade.php ファイルを渡している
         // また View テンプレートに headline、 posts、という変数を渡している
-        return view('museum.index', ['headline' => $headline, 'posts' => $posts]);
+        return view('museum.index', [ 'posts' => $posts ]);
     }
     
 }

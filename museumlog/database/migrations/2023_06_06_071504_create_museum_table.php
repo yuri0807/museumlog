@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('body');
             $table->string('image_path')->nullable();
-            $table->string('go');
+            $table->integer('go');//1であれば行きたい2であれば行った
             $table->timestamps();
         });
     }

@@ -34,7 +34,7 @@
                                 <th width="10%">ID</th>
                                 <th width="20%">タイトル</th>
                                 <th width="50%">メモ</th>
-                                <th width="10%">操作</th>
+                                <th width="10%">分類</th>
                             </tr>
                         </thead>
                         <tbody>

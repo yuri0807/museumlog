@@ -22,6 +22,7 @@ public function add()
 
         $museum = new Museum;
         $form = $request->all();
+        $museum_form = $request->all();
 
         // フォームから画像が送信されてきたら、保存して、$museum->image_path に画像のパスを保存する
         if (isset($form['image'])) {
@@ -64,6 +65,7 @@ public function add()
         if (empty($museum)) {
             abort(404);
         }
+        
         return view('admin.museum.edit', ['museum_form' => $museum]);
     }
 
@@ -91,6 +93,8 @@ public function add()
 
         // 該当するデータを上書きして保存する
         $museum->fill($museum_form)->save();
+        
+        return redirect('admin/museum');
  }
  
     public function delete(Request $request)
