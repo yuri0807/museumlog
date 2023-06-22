@@ -6,7 +6,7 @@
   font-style: normal;
 }
 html, body {
-  background: #fff;
+  background: #D6E6EA;
 }
 
 body {
@@ -14,16 +14,17 @@ body {
   font-size: 18px;
   font-weight: 300;
   line-height: 1.8;
-  color: #676767;
+  color: #D6E6EA;
 }
 body.fh5co-overflow {
   overflow-x: auto;
+  color: #D6E6EA;
 }
 
 body:before, body:after {
   content: "";
   position: fixed;
-  background: #fef7ec;
+  background: #D6E6EA;
   left: 0;
   right: 0;
   height: 20px;
@@ -55,36 +56,36 @@ body {
 }
 
 ::-webkit-selection {
-  color: #fff;
+  color: #D6E6EA;
   background: #f7c873;
 }
 
 ::-moz-selection {
-  color: #fff;
+  color: #D6E6EA;
   background: #f7c873;
 }
 
 ::selection {
-  color: #fff;
+  color: #D6E6EA;
   background: #f7c873;
 }
 
 a {
-  color: #f7c873;
+  color: #D6E6EA;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
-  color: #f3ac2b;
+  color: #D6E6EA;
 }
 a:hover, a:focus, a:active {
-  color: #de930d;
+  color: #D6E6EA;
   outline: none;
   text-decoration: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display", times, serif;
-  color: #000;
+  color: #D6E6EA;
   margin-bottom: 1.5em;
   clear: both;
 }

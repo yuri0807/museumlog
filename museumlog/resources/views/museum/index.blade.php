@@ -2,13 +2,16 @@
 
 @section('content')
     <div class="container">
-        <hr color="#c0c0c0">
         <ul class="sort-btn">
-<li class="sort00 active">全て</li><!--はじめに「全て」ボタンに現在地表示をつけるためactive というクラス名を付与-->
-<li class="sort01">行った</li>
-<li class="sort02">行きたい</li>
+<li class="sort00 active" style="background-color: darkgray; color: white;"><a href="{{ route('museum.index') }}">全て</a></li><!--はじめに「全て」ボタンに現在地表示をつけるためactive というクラス名を付与-->
+<li class="sort01" style="background-color: darkgray; color: white;"><a href="{{ route('museum.go_index') }}">行った</a></li>
+<li class="sort02" style="background-color: darkgray; color: white;"><a href="{{ route('museum.wanttogo_index') }}">行きたい</a></li>
+            <div class="col-md-4">
+           <a href="{{ route('admin.museum.add') }}" role="button" class="btn btn-light" style="background-color: darkgray; color: white;">新規追加</a>
+            </div>
 </ul>
  <ul class="grid">
+     
       @foreach($posts as $museum)
     <li class="item sort01">
     <div class="item-content">

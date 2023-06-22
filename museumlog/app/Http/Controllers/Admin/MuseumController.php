@@ -22,7 +22,6 @@ public function add()
 
         $museum = new Museum;
         $form = $request->all();
-        $museum_form = $request->all();
 
         // フォームから画像が送信されてきたら、保存して、$museum->image_path に画像のパスを保存する
         if (isset($form['image'])) {

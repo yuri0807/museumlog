@@ -13,30 +13,48 @@
                             @endforeach
                         </ul>
                     @endif
-                    <div class="form-group row">
-                            <div class="form-text text-info">
-                                <img src="{{ secure_asset('storage/image/' . $museum->image_path) }}"></a>
-                            </div>
-                         
-                            <div class="form-group row">
-                        <label class="col-md-2" for="title">タイトル</label>
-                        <div class="col-md-10">
-                            <input type="text" class="form-control" name="title" value="{{ $museum->title }}">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-md-2" for="body">本文</label>
-                        <div class="col-md-10">
-                            <textarea class="form-control" name="body" rows="20">{{ $museum->body }}</textarea>
-                        </div>
-                    </div>
-                            
+                    
+                   <div class="d-flex justify-content-center">
+  <div class="mb-3">
+    <img src="{{ secure_asset('storage/image/' . $museum->image_path) }}" class="img-fluid" style="max-height: 400px;">
+  </div>
+</div>
+
+<div class="d-flex justify-content-center">
+  <div class="form-group row">
+    <label class="col-md-2" for="title"></label>
+    <div class="col-md-10 text-center">
+      <span class="font-weight-bold text-dark fs-10" style="font-size: 24px; white-space: nowrap; display: inline-block; text-align: center; width: 100%;">{{ $museum->title }}</span>
+    </div>
+  </div>
+</div>
+
+<div class="d-flex justify-content-center">
+  <div class="form-group row">
+    <label class="col-md-2" for="body"></label>
+    <div class="col-md-10 text-center">
+      <span class="font-weight-bold text-dark fs-10" style="font-size: 18px; white-space: nowrap; display: inline-block; text-align: center; width: 100%;">{{ $museum->body }}</span>
+    </div>
+  </div>
+</div>             
                     <div class="form-group row">
                         <div class="col-md-10">
                             <input type="hidden" name="id" value="{{ $museum->id }}">
                             @csrf
-                            <a href="{{ route('admin.museum.index', ['id' => $museum->id]) }}">もどる</a>
-                             <a href="{{ route('admin.museum.edit', ['id' => $museum->id]) }}">編集</a>
+                            
+ <div class="d-flex justify-content-center">
+  <div class="btn-group">
+    <a href="{{ route('admin.museum.index', ['id' => $museum->id]) }}" class="btn btn-light" style="background-color: white; color: gray; margin-right: 10px;">
+      もどる
+    </a>
+    </div>
+    <div class="btn-group">
+    <a href="{{ route('admin.museum.edit', ['id' => $museum->id]) }}" class="btn btn-light" style="background-color: white; color: gray;">
+      編集
+    </a>
+  </div>
+  </div>
+</div>
                         </div>
                     </div>
                 </form>

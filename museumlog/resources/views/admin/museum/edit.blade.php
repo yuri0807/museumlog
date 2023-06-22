@@ -3,9 +3,10 @@
 
 @section('content')
     <div class="container">
+        <hr color="#c0c0c0">
         <div class="row">
             <div class="col-md-8 mx-auto">
-                <h2>ログ編集</h2>
+              
                 <form action="{{ route('admin.museum.update') }}" method="post" enctype="multipart/form-data">
                     @if (count($errors) > 0)
                         <ul>
@@ -21,9 +22,9 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2" for="body">本文</label>
+                        <label class="col-md-2" for="body">メモ</label>
                         <div class="col-md-10">
-                            <textarea class="form-control" name="body" rows="20">{{ $museum_form->body }}</textarea>
+                            <textarea class="form-control" name="body" rows="7">{{ $museum_form->body }}</textarea>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -55,13 +56,13 @@
                         </div>      
                         </div>
                     </div>
-                    <div class="form-group row">
-                        <div class="col-md-10">
-                            <input type="hidden" name="id" value="{{ $museum_form->id }}">
-                            @csrf
-                            <input type="submit" class="btn btn-primary" value="更新">
-                        </div>
-                    </div>
+                  <div class="form-group row">
+  <div class="col-md-10 text-center">
+    <input type="hidden" name="id" value="{{ $museum_form->id }}">
+    @csrf
+    <input type="submit" class="btn btn-light" value="更新" style="background-color: white; color: gray;">
+  </div>
+</div>
                 </form>
             </div>
         </div>

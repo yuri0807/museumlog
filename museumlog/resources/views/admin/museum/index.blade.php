@@ -4,7 +4,6 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <h2>ログ一覧</h2>
         </div>
         <div class="row">
             <div class="col-md-4">
