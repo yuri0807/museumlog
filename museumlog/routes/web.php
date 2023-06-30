@@ -19,7 +19,7 @@ use App\Http\Controllers\Admin\MuseumController;
 Route::controller(MuseumController::class)->prefix('admin')->name('admin.')->middleware('auth')->group(function () {
     Route::get('museum/create', 'add')->name('museum.add');
     Route::post('museum/create', 'create')->name('museum.create');
-    Route::get('museum', 'index')->name('museum.index');
+    //Route::get('museum', 'index')->name('museum.index');
     Route::get('museum/show', 'show')->name('museum.show');
     Route::get('museum/edit', 'edit')->name('museum.edit');
     Route::post('museum/edit', 'update')->name('museum.update');
@@ -28,7 +28,7 @@ Route::controller(MuseumController::class)->prefix('admin')->name('admin.')->mid
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 use App\Http\Controllers\MuseumController as PublicMuseumController;
 Route::get('/', [PublicMuseumController::class, 'index'])->name('museum.index');

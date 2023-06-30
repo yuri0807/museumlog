@@ -1,12 +1,13 @@
+@charset "UTF-8";
 body {
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #000;
+  background-color: #D6E6EA;
   color: #fff;
 }
 
 .navbar-laravel {
-  background-color: #000;
+  background-color: #999999;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
@@ -19,24 +20,24 @@ body {
 }
 
 .table-dark {
-  color: #fff;
+  color: #808080;
 }
 
 .list-group-item {
-  border-color: #fff;
-  background-color: #000;
+  border-color: rgba(255, 255, 255, 0.6666666667);
+  background-color: #fff;
 }
 
 .login-box {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0); /* 完全に透明 */
 }
 
 .login-header {
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0); /* 完全に透明 */
 }
 
 .login-body {
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0); /* 完全に透明 */
 }
 
 .form-group {
@@ -46,5 +47,44 @@ body {
 .list-group-item {
   color: #fff;
   border-color: #fff;
-  background-color: #000;
+  background-color: #fff;
+}
+
+.form-control {
+  background-color: #ffffff;
+}
+
+.form-control:active,
+.form-control:focus {
+  background-color: #ffffff;
+}
+
+/* ラジオボタンのチェックマークの色を白色に設定 */
+input[type=radio] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ffffff;
+  background-color: #ffffff;
+  outline: none;
+  cursor: pointer;
+}
+
+/* ラジオボタンがチェックされた場合のスタイル */
+input[type=radio]:checked {
+  background-color: #ffffff;
+}
+
+/* ラジオボタンのチェックマークを表示 */
+input[type=radio]::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin: 3px;
 }

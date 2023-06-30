@@ -41,7 +41,7 @@ public function add()
         $museum->save();
         
         // admin/museum/createにリダイレクトする
-        return redirect('admin/museum/create');
+        return redirect('admin.museum.create');
     }
     public function index(Request $request)
     {
@@ -53,7 +53,7 @@ public function add()
             // それ以外はすべてのニュースを取得する
             $posts = Museum::all();
         }
-        return view('admin.museum.index', ['posts' => $posts, 'cond_title' => $cond_title]);
+        return view('museum.index', ['posts' => $posts, 'cond_title' => $cond_title]);
     }
     
     
@@ -65,7 +65,8 @@ public function add()
             abort(404);
         }
         
-        return view('admin.museum.edit', ['museum_form' => $museum]);
+        
+        return view('admin.museum.edit', ['museum_form' => $museum, "museum" => $museum]);
     }
 
     public function update(Request $request)
@@ -93,7 +94,7 @@ public function add()
         // 該当するデータを上書きして保存する
         $museum->fill($museum_form)->save();
         
-        return redirect('admin/museum');
+        return redirect()->route('museum.index');
  }
  
     public function delete(Request $request)
@@ -104,7 +105,7 @@ public function add()
         // 削除する
         $museum->delete();
         
-        return redirect('admin/museum/');
+        return  redirect()->route('museum.index');
    
     }
     public function show(Request $request){

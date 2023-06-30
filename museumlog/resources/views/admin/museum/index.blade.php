@@ -7,18 +7,17 @@
         </div>
         <div class="row">
             <div class="col-md-4">
-            <a href="{{ route('admin.museum.add') }}" role="button" class="btn btn-primary">新規追加</a>
+            <a href="{{ route('admin.museum.add') }}" role="button" class="btn btn-light" style="background-color: white; color: gray;">新規追加</a>
             </div>
             <div class="col-md-8">
                 <form action="{{ route('admin.museum.index') }}" method="get">
                     <div class="form-group row">
-                        <label class="col-md-2">タイトル</label>
                         <div class="col-md-8">
                             <input type="text" class="form-control" name="cond_title" value="{{ $cond_title }}">
                         </div>
                         <div class="col-md-2">
                             @csrf
-                            <input type="submit" class="btn btn-primary" value="検索">
+                            <input type="submit" class="btn btn-light" value="検索" style="background-color: white; color: gray;">
                         </div>
                     </div>
                 </form>
@@ -33,7 +32,7 @@
                                 <th width="10%">ID</th>
                                 <th width="20%">タイトル</th>
                                 <th width="50%">メモ</th>
-                                <th width="10%">分類</th>
+                                <th width="10%">操作</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -42,7 +41,6 @@
                                     <th>{{ $museum->id }}</th>
                                     <td>{{ Str::limit($museum->title, 100) }}</td>
                                     <td>{{ Str::limit($museum->body, 250) }}</td>
-                                    <td>{{ Str::limit($museum->go, 50) }}</td>
                                     <td>
                                         <div>
                                             <a href="{{ route('admin.museum.edit', ['id' => $museum->id]) }}">編集</a>

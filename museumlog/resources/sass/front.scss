@@ -3,13 +3,19 @@ body {
 }
 
 .navbar-laravel {
-  background-color: #D6E6EA;
+  background-color: #999999;
 }
+
+.sort-btn li a {
+        text-decoration: none; /* 下線を無くす */
+        color: white; /* 文字を白色にする */
+    }
 
 .header {
   .logo {
       width: 120px;
       height: 82px;
+      color: #fff;
   }
 }
 
@@ -27,7 +33,7 @@ body {
       position: absolute;
       bottom: 0;
       left: 0;
-      background-color: #D6E6EA;
+      background-color: #fff;
       h1 {
     color: #fff;
     font-size: 1.2em;
@@ -35,7 +41,7 @@ body {
     }
     .body {
       font-size: 0.8em;
-      color: #D6E6EA;
+      color: #fff;
     }
   }
 }
@@ -59,4 +65,8 @@ body {
       }
     }
   }
+}
+
+.form-control {
+  background-color: #ffffff;
 }

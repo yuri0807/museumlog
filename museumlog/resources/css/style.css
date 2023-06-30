@@ -14,17 +14,17 @@ body {
   font-size: 18px;
   font-weight: 300;
   line-height: 1.8;
-  color: #D6E6EA;
+  color: #fff;
 }
 body.fh5co-overflow {
   overflow-x: auto;
-  color: #D6E6EA;
+  color: #fff;
 }
 
 body:before, body:after {
   content: "";
   position: fixed;
-  background: #D6E6EA;
+  background: #fff;
   left: 0;
   right: 0;
   height: 20px;
@@ -56,36 +56,36 @@ body {
 }
 
 ::-webkit-selection {
-  color: #D6E6EA;
+  color: #fff;
   background: #f7c873;
 }
 
 ::-moz-selection {
-  color: #D6E6EA;
+  color: #fff;
   background: #f7c873;
 }
 
 ::selection {
-  color: #D6E6EA;
+  color: #fff;
   background: #f7c873;
 }
 
 a {
-  color: #D6E6EA;
+  color: #fff;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
-  color: #D6E6EA;
+  color: #fff;
 }
 a:hover, a:focus, a:active {
-  color: #D6E6EA;
+  color: #fff;
   outline: none;
   text-decoration: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display", times, serif;
-  color: #D6E6EA;
+  color: #fff;
   margin-bottom: 1.5em;
   clear: both;
 }
