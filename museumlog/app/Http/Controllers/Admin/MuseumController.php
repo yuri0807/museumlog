@@ -41,7 +41,7 @@ public function add()
         $museum->save();
         
         // admin/museum/createにリダイレクトする
-        return redirect('admin.museum.create');
+        return redirect()->route('museum.index');
     }
     public function index(Request $request)
     {
