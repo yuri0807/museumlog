@@ -28,9 +28,16 @@ Route::controller(MuseumController::class)->prefix('admin')->name('admin.')->mid
 
 Auth::routes();
 
-//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 use App\Http\Controllers\MuseumController as PublicMuseumController;
 Route::get('/', [PublicMuseumController::class, 'index'])->name('museum.index');
 Route::get('/go_index', [PublicMuseumController::class, 'go_index'])->name('museum.go_index');
 Route::get('/wanttogo_index', [PublicMuseumController::class, 'wanttogo_index'])->name('museum.wanttogo_index');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
