@@ -15,7 +15,7 @@
                     
                    <div class="d-flex justify-content-center">
                    <div class="mb-3">
-                        <img src="{{ secure_asset('storage/image/' . $museum->image_path) }}" class="img-fluid" style="max-height: 400px;">
+                        <img src="{{ secure_asset('storage/image/' . $museum->image_path) }}" class="img-fluid" style="height: 400px;">
                    </div>
                    </div>
 
